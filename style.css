@@ -6,6 +6,7 @@
 body {
     height: 100vw;
     font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -60,7 +61,7 @@ body {
 .header-nav-item {
     height: 100%;
     margin-right: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
+    
     
 }
 .menu-btn{
@@ -216,13 +217,13 @@ body {
     background-image: url(/Mammut/slike-mammut/Hiking_FW22_Scottland_019.webp);
 }
 .hero-content-up {
-    background-color: blanchedalmond;
+    background-color: #d0c5af;
 }
 .hero-img-mid {
     background-image: url(/Mammut/slike-mammut/50e0035d4d7937a60a0e19717c701026.png);
 }
 .hero-content-mid {
-    background-color: rgb(0, 0, 66);
+    background-color: #23293c ;
 }
 .hero-img-dwn {
     width: 100%;
@@ -266,6 +267,126 @@ body {
 .footer-main {
     width: 100%;
     height: 1200px;
-    background-color: rgb(0, 0, 66);
+    background-color: #23293c;
     display: flex;
+    position: relative;
 }
+.footer-communications {
+    position: absolute;
+    width: 35%;
+    height: 300px;
+    left: 2.5%;
+    top: 5%;
+    position: relative;
+}
+.communications-container {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    background-color: #23293c;
+    float: left;
+    position: relative;
+    align-items: center;
+}
+.communications-icon-wrapper {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.communications-icon {
+    background-color: #303851;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+}
+.communications-icon:hover {
+    background-color: #23293c;
+}
+.icon {
+    width: 30%;
+    height: 30%;
+    margin: auto;
+}
+.communications-content {
+    width: 60%;
+    height: 80px;
+    position: absolute;
+    right: 0;
+    align-items: center;
+    padding: 15px;
+
+}
+.content-title {
+    font-size: 25px;
+    color: #dcdde0;
+    font-weight: bold;
+}
+.content-text {
+    font-size: 15px;
+    color: #adaeb2;
+}
+.footer-nav {
+    position: absolute;
+    width: 35%;
+    height: 350px;
+    right: 2.5%;
+    top: 5%;
+    border: 4px  solid #3f4454;
+    border-radius: 2px;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+.footer-nav-item {
+    width: 100%;
+    height: 25%;
+    border: 4px  solid #3f4454;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.nav-content {
+    font-size: 30px;
+    color: #dcdde0;
+    transition: all .2s ease-in-out;
+}
+.footer-nav-item:hover .nav-content {
+    transform: translateX(40px);
+}
+.arrow-container {
+    height: 100%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.arrow-line {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+}
+.arrow-line::after,
+.arrow-line::before {
+    content: '';
+    width: 15px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+}
+.arrow-line::after {
+    transform: rotate(45deg);
+    right: 0;
+}
+
+
