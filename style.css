@@ -157,6 +157,7 @@ body {
     margin-left: 1rem;
     float: right;
     position: relative;
+    cursor: pointer;
 }
 .loop {
     display: flex;
@@ -249,15 +250,75 @@ body {
 }
 .hero-text {
     font-size: 18px;
-    margin: 25.6px 0 0 0;
+    margin: 25.6px 0 25.6px 0;
 }
 .gender-link-container {
-    background-color: white;
     width: 100px;
     height: 30px;
     display: block;
     margin: 25.6px 30px 25.6px 0px ;
     float: left;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.hero-arrow-container {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 2px;
+    transition: all .4s ease-in-out;
+    translate: -30px;
+}
+.hero-arrow-line {
+    width: 15px;
+    height: 3px;
+    background-color: transparent;
+    transition: all .4s ease-in-out;
+}
+.hero-arrow-line::after,
+.hero-arrow-line::before {
+    border-radius: 2px;
+    content: '';
+    width: 7px;
+    height: 3px;
+    background-color: transparent;
+    position: absolute;
+    transition: all .4s ease-in-out;
+}
+.hero-arrow-line::after {
+    transform: rotate(45deg);
+    translate: 10px -2px;
+    transition: all .4s ease-in-out;
+}
+.hero-arrow-line::before {
+    transform: rotate(-45deg);
+    translate: 10px 2px;
+    transition: all .4s ease-in-out;
+}
+.gender-link-container:hover .hero-arrow-container {
+    translate: 0px;
+}
+.gender-link-container:hover .hero-arrow-line {
+    background-color: black;
+}
+.gender-link-container:hover .hero-arrow-line::before {
+    background-color: black;
+}
+.gender-link-container:hover .hero-arrow-line::after {
+    background-color: black;
+}
+.gender-text {
+    font-size: 18px;
+    translate: -30px;
+    transition: all .3s ease-in-out;
+}
+.gender-link-container:hover .gender-text {
+    translate: 10px;
 }
 
 
@@ -271,11 +332,10 @@ body {
     align-items: center;
 }
 .categories-heading {
-    width: 40%;
+    width: 35%;
     height: 40%; 
     padding: 0px 71.68px 0px 51.2px;
     display: flex;  
-    background-color: aqua;
     position: relative;
 }
 .categories-text {
@@ -292,9 +352,100 @@ body {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    align-self: center;
-    pos
+    position: absolute;
+    left: 40%;
+    top: 33%;
   }
+  
+.categories-item {
+    width: 20%;
+    height: 65%;
+    margin: 2% 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+ }
+ .clothing {
+    background-image: url(/Mammut/slike-mammut/clothing.jpg);
+    background-size: cover;
+ }
+ .footwear {
+    background-image: url(/Mammut/slike-mammut/footwear.jpg);
+    background-size: cover;
+ }
+ .equipment {
+    background-image: url(/Mammut/slike-mammut/equipment.jpg);
+    background-size: cover;
+ }
+ .categories-item-text-wrapper {
+    width: 100px;
+    height: 30px;
+    display: block;
+    margin: 25.6px 30px 25.6px 0px ;
+    float: left;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.categories-arrow-container {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 2px;
+    transition: all .4s ease-in-out;
+    translate: -30px;
+}
+.categories-arrow-line {
+    width: 15px;
+    height: 3px;
+    background-color: transparent;
+    transition: all .4s ease-in-out;
+}
+.categories-arrow-line::after,
+.categories-arrow-line::before {
+    border-radius: 2px;
+    content: '';
+    width: 7px;
+    height: 3px;
+    background-color: transparent;
+    position: absolute;
+    transition: all .4s ease-in-out;
+}
+.categories-arrow-line::after {
+    transform: rotate(45deg);
+    translate: 10px -2px;
+    transition: all .4s ease-in-out;
+}
+.categories-arrow-line::before {
+    transform: rotate(-45deg);
+    translate: 10px 2px;
+    transition: all .4s ease-in-out;
+}
+.categories-item:hover .categories-arrow-container {
+    translate: 0px;
+}
+.categories-item:hover .categories-arrow-line {
+    background-color: white;
+}
+.categories-item:hover .categories-arrow-line::before {
+    background-color: white;
+}
+.categories-item:hover .categories-arrow-line::after {
+    background-color: white;
+}
+.categories-item-text {
+    font-size: 30px;
+    translate: -30px;
+    transition: all .3s ease-in-out;
+    color: white;
+}
+.categories-item:hover .categories-item-text {
+    translate: 10px;
+}
 
 
 
@@ -384,6 +535,7 @@ body {
 .content-text {
     font-size: 15px;
     color: #adaeb2;
+    white-space: nowrap;
 }
 .footer-nav {
     position: absolute;
