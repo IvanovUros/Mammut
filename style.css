@@ -152,17 +152,17 @@ body {
 }
 .icon {
     display: flex;
-    display: inline-block;
     width: 2rem;
     height: 100%;
-    margin-left: 1rem;
     float: right;
+    position: relative;
+    border: 1px black solid;
 }
 .loop {
     display: flex;
     width: 100%;
     height: 100%;
-    position: relative;
+    position: absolute;
 }
 .loop-curcle {
     border: 2px solid white;
@@ -218,6 +218,9 @@ body {
 }
 .hero-content-up {
     background-color: #d0c5af;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .hero-img-mid {
     background-image: url(/Mammut/slike-mammut/50e0035d4d7937a60a0e19717c701026.png);
@@ -231,8 +234,29 @@ body {
     background-image: url(/Mammut/slike-mammut/mammut1.jpeg);
     background-size: cover;
 }
-
-
+.hero-text-wrapper {
+    width: 90%;
+    height: 400px;
+    position: absolute;
+    bottom: 200px;
+    position: inherit;
+}
+.hero-title {
+    font-size: 102.4px;
+    margin: 25.6px 0 0 0;
+}
+.hero-text {
+    font-size: 18px;
+    margin: 25.6px 0 0 0;
+}
+.gender-link-container {
+    background-color: white;
+    width: 100px;
+    height: 30px;
+    display: block;
+    margin: 25.6px 30px 25.6px 0px ;
+    float: left;
+}
 
 
 
@@ -358,10 +382,24 @@ body {
 .nav-content {
     font-size: 30px;
     color: #dcdde0;
+    position: absolute;
     transition: all .2s ease-in-out;
+    
 }
 .footer-nav-item:hover .nav-content {
     transform: translateX(40px);
+}
+.footer-nav-item:hover .arrow-line {
+    background-color: #dcdde0;
+}
+.footer-nav-item:hover .arrow-line::after {
+    background-color: #dcdde0;
+}
+.footer-nav-item:hover .arrow-line::before {
+    background-color: #dcdde0;
+}
+.footer-nav-item:hover .arrow-container {
+    translate: -15px;
 }
 .arrow-container {
     height: 100%;
@@ -370,23 +408,33 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    border-radius: 2px;
+    translate: -60px;
+    transition: all .3s ease-in-out;
 }
 .arrow-line {
     width: 25px;
     height: 3px;
-    background-color: black;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
 }
 .arrow-line::after,
 .arrow-line::before {
+    border-radius: 2px;
     content: '';
     width: 15px;
     height: 3px;
-    background-color: black;
+    background-color: transparent;
     position: absolute;
+    transition: all .2s ease-in-out;
 }
 .arrow-line::after {
     transform: rotate(45deg);
-    right: 0;
+    translate: 15px -5px;
+    transition: all .3s ease-in-out;
 }
-
-
+.arrow-line::before {
+    transform: rotate(-45deg);
+    translate: 15px 5px;
+    transition: all .3s ease-in-out;
+}
