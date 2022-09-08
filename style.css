@@ -144,13 +144,13 @@ body {
 
 
 /* ICON NAV */
-.icon-wrapper {
+.header-icon-wrapper {
     width: 10%;
     height: 2rem;
     position: absolute;
     right: 2.5%;
 }
-.icon {
+.header-icon {
     display: flex;
     width: 2rem;
     height: 100%;
@@ -159,15 +159,49 @@ body {
     position: relative;
     cursor: pointer;
 }
-.loop {
+.login-icon {
     display: flex;
     width: 100%;
     height: 100%;
     position: absolute;
-    position: inherit;
+    justify-content: center;
+}
+.login-head {
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    transition: all .1s ease-in-out;
+    top: 2px;
+}
+.login-body {
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 25px;
+    height: 15px;
+    position: absolute;
+    transition: all .1s ease-in-out;
+    border-top: 3px solid white;
+    border-left:  0;
+    border-bottom:  0;
+    border-right: 0;
+    bottom: -5px;
+}
+.login-icon:hover .login-head {
+    border-color: red;
+}
+.login-icon:hover .login-body {
+    border-color: red;
+}
+.loop-icon {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 .loop-curcle {
-    border: 2px solid white;
+    border: 3px solid white;
     border-radius: 50%;
     width: 25px;
     height: 25px;
@@ -178,7 +212,7 @@ body {
     position: absolute;
     background-color:white;
     width: 0.7rem;
-    height: 2px;
+    height: 3px;
     right: 0;
     bottom: 0;
     rotate: 45deg;
@@ -186,12 +220,88 @@ body {
     border-radius: 5px;
     transition: all .1s ease-in-out;
 }
-.loop:hover .loop-curcle {
+.loop-icon:hover .loop-curcle {
     border-color: red;
 }
-.loop:hover .loop-handle {
+.loop-icon:hover .loop-handle {
     background-color: red;
 }
+.basket-icon {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    justify-content: center;
+}
+.basket-handle {
+    width: 15px;
+    height: 7px;
+    border: 3px white solid;
+    position: absolute;
+    top: 2px;
+    border-bottom: 0;
+    border-radius: 2px;
+    transition: all .1s ease-in-out;
+}
+.basket-top {
+    width: 90%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    top: 10px;
+    border-radius: 2px;
+    transition: all .1s ease-in-out;
+}
+.basket-sidel {
+    width: 3px;
+    height: 50%;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    rotate: -10deg;
+    translate: 3px -5px;
+    border-radius: 2px;
+    transition: all .1s ease-in-out;
+}
+.basket-sider {
+    width: 3px;
+    height: 50%;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    rotate: 10deg;
+    translate: -3px -5px;
+    border-radius: 2px;
+    transition: all .1s ease-in-out;
+}
+.basket-bottom {
+    width: 70%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    bottom: 5px;
+    border-radius: 2px;
+    transition: all .1s ease-in-out;
+}
+.basket-icon:hover .basket-handle {
+    border-color: red;
+}
+.basket-icon:hover .basket-top {
+    background-color: red;
+}
+.basket-icon:hover .basket-sidel {
+    background-color: red;
+}
+.basket-icon:hover .basket-sider {
+    background-color: red;
+}
+.basket-icon:hover .basket-bottom {
+    background-color: red;
+}
+
+
 
 
 
@@ -210,6 +320,7 @@ body {
     display: flex;
     position: inherit;
     background-size: cover;
+    background-position: center;
 }
 .hero-content-up,
 .hero-content-mid{
@@ -229,7 +340,10 @@ body {
     background-image: url(/Mammut/slike-mammut/50e0035d4d7937a60a0e19717c701026.png);
 }
 .hero-content-mid {
-    background-color: #23293c ;
+    background-color: #23293c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .hero-img-dwn {
     width: 100%;
@@ -248,10 +362,21 @@ body {
     font-size: 102.4px;
     margin: 25.6px 0 0 0;
 }
+.hero-title-mid {
+    font-size: 102.4px;
+    margin: 25.6px 0 0 0;
+    color: white;
+}
 .hero-text {
     font-size: 18px;
     margin: 25.6px 0 25.6px 0;
 }
+.hero-text-mid {
+    font-size: 18px;
+    margin: 25.6px 0 25.6px 0;
+    color: white;
+}
+
 .gender-link-container {
     width: 100px;
     height: 30px;
@@ -320,6 +445,78 @@ body {
 .gender-link-container:hover .gender-text {
     translate: 10px;
 }
+.discovery-link-container {
+    width: 200px;
+    height: 30px;
+    display: block;
+    margin: 25.6px 30px 25.6px 0px ;
+    float: left;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.hero-mid-arrow-container {
+    height: 100%;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 2px;
+    transition: all .4s ease-in-out;
+    translate: -30px;
+}
+.hero-mid-arrow-line {
+    width: 15px;
+    height: 3px;
+    background-color: transparent;
+    transition: all .4s ease-in-out;
+}
+.hero-mid-arrow-line::after,
+.hero-mid-arrow-line::before {
+    border-radius: 2px;
+    content: '';
+    width: 7px;
+    height: 3px;
+    background-color: transparent;
+    position: absolute;
+    transition: all .4s ease-in-out;
+}
+.hero-mid-arrow-line::after {
+    transform: rotate(45deg);
+    translate: 10px -2px;
+    transition: all .4s ease-in-out;
+}
+.hero-mid-arrow-line::before {
+    transform: rotate(-45deg);
+    translate: 10px 2px;
+    transition: all .4s ease-in-out;
+}
+.discovery-link-container:hover .hero-mid-arrow-container {
+    translate: 0px;
+}
+.discovery-link-container:hover .hero-mid-arrow-line {
+    background-color: white;
+}
+.discovery-link-container:hover .hero-mid-arrow-line::before {
+    background-color: white;
+}
+.discovery-link-container:hover .hero-mid-arrow-line::after {
+    background-color: white;
+}
+.discovery-text {
+    font-size: 18px;
+    position: absolute;
+    transition: all .2s ease-in-out;
+    color: white;
+    white-space: nowrap;
+}
+.discovery-link-container:hover .discovery-text {
+    translate: 30px;
+}
+
+
 
 
 
@@ -369,14 +566,17 @@ body {
  .clothing {
     background-image: url(/Mammut/slike-mammut/clothing.jpg);
     background-size: cover;
+    background-position: center;
  }
  .footwear {
     background-image: url(/Mammut/slike-mammut/footwear.jpg);
     background-size: cover;
+    background-position: center;
  }
  .equipment {
     background-image: url(/Mammut/slike-mammut/equipment.jpg);
     background-size: cover;
+    background-position: center;
  }
  .categories-item-text-wrapper {
     width: 100px;
@@ -453,7 +653,58 @@ body {
 .card-container {
     width: 100%;
     height: 1000px;
+    display: flex;
+    position: relative;
 }
+.card {
+    background-color: black;
+    width: 40%;
+    height: 75%;
+    position: absolute;
+}
+.cardl {
+    left: 9%;
+    top: 10%;
+    overflow: hidden;
+}
+.cardr {
+    right: 9%;
+    top: 15%;
+    overflow: hidden;
+}
+.card-men {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-image: url(/Mammut/slike-mammut/Men.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardl:hover .card-men,
+.cardl:focus .card-men {
+  transform: scale(1.05);
+}
+.card-women {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-image: url(/Mammut/slike-mammut/Women.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+.cardr:hover .card-women,
+.cardr:focus .card-women {
+  transform: scale(1.05);
+}
+
+
 
 
 
@@ -474,6 +725,8 @@ body {
     background-color: #23293c;
     display: flex;
     position: relative;
+    align-items: center;
+    justify-content: center;
 }
 .footer-communications {
     position: absolute;
@@ -481,7 +734,7 @@ body {
     height: 300px;
     left: 2.5%;
     top: 5%;
-    position: relative;
+    
 }
 .communications-container {
     width: 50%;
@@ -527,12 +780,12 @@ body {
     padding: 15px;
 
 }
-.content-title {
+.communications-content-title {
     font-size: 25px;
     color: #dcdde0;
     font-weight: bold;
 }
-.content-text {
+.communications-content-text {
     font-size: 15px;
     color: #adaeb2;
     white-space: nowrap;
@@ -618,4 +871,85 @@ body {
     transform: rotate(-45deg);
     translate: 15px 5px;
     transition: all .3s ease-in-out;
+}
+.footer-description {
+    width: 95%;
+    height: 400px;
+    position: relative;
+    position: absolute;
+    top: 40%;
+}
+.footer-company-description {
+    width: 35%;
+    height: 70%;
+    position: relative;
+}
+.description-heading {
+    font-size: 15px;
+    color: #adaeb2;
+    margin: 0px 0px 15px 2%;
+}
+.description-content {
+    font-size: 25px;
+    color: #dcdde0;
+    margin-left: 2%;
+}
+.location-switch-container {
+    width: 150px;
+    height: 40px;
+    position: absolute;
+    left: 2%;
+    bottom: 2%;
+    display: flex;
+}
+
+
+.location-icon-wrapper {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    align-self: center;
+    
+}
+.location-icon {
+    width: 90%;
+    height: 90%;
+    position: inherit;
+    display: block;
+}
+.location-heading {
+    font-size: 13px;
+    color: #adaeb2;
+    position: absolute;
+    left: 40px;
+    top: 5%;
+} 
+.location-switch-country {
+    position: absolute;
+    bottom: 5%;
+    left: 40px;
+    font-size: 13px;
+    color: #dcdde0;
+} .footer-sub-nav-wrapper {
+    position: absolute;
+    width: 35%;
+    height: 400px;
+    right: 2%;
+    top: 0;
+    display: flex;
+}
+.footer-sub-nav {
+    width: 50%;
+    height: 100%;
+    border: 1px solid black;
+    float: right;
+}
+.footer-sub-nav-item {
+    width: 100%;
+    height: 50px;
+    border: 1px solid gray;
 }
