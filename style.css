@@ -902,8 +902,6 @@ body {
     bottom: 2%;
     display: flex;
 }
-
-
 .location-icon-wrapper {
     position: absolute;
     width: 30px;
@@ -913,7 +911,6 @@ body {
     align-items: center;
     position: relative;
     align-self: center;
-    
 }
 .location-icon {
     width: 90%;
@@ -945,11 +942,80 @@ body {
 .footer-sub-nav {
     width: 50%;
     height: 100%;
-    border: 1px solid black;
     float: right;
+}
+.footer-sub-nav-heading {
+    font-size: 15px;
+    color: #adaeb2;
+    margin-bottom: 30px;
 }
 .footer-sub-nav-item {
     width: 100%;
-    height: 50px;
-    border: 1px solid gray;
+    height: 40px;
+    display: flex;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.sub-nav-content {
+    position: inherit;
+    transition: all .3s ease-in-out;
+    font-size: 25px;
+    color: #dcdde0;
+    position: absolute;
+    margin: 0;
+}
+.sub-nav-arrow-container {
+    height: 100%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 2px;
+    translate: -40px;
+    transition: all .3s ease-in-out;
+}
+.sub-nav-arrow-line {
+    width: 20px;
+    height: 2px;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+}
+.sub-nav-arrow-line::after,
+.sub-nav-arrow-line::before {
+    border-radius: 2px;
+    content: '';
+    width: 10px;
+    height: 2px;
+    background-color: transparent;
+    position: absolute;
+    transition: all .2s ease-in-out;
+}
+.sub-nav-arrow-line::after {
+    transform: rotate(45deg);
+    translate: 13px -3px;
+    transition: all .3s ease-in-out;
+}
+.sub-nav-arrow-line::before {
+    transform: rotate(-45deg);
+    translate: 13px 3px;
+    transition: all .3s ease-in-out;
+}
+.footer-sub-nav-item:hover .sub-nav-content {
+    transform: translateX(20px);
+}
+.footer-sub-nav-item:hover .sub-nav-arrow-line {
+    background-color: #dcdde0;
+}
+.footer-sub-nav-item:hover .sub-nav-arrow-line::after {
+    background-color: #dcdde0;
+}
+.footer-sub-nav-item:hover .sub-nav-arrow-line::before {
+    background-color: #dcdde0;
+}
+.footer-sub-nav-item:hover .sub-nav-arrow-container {
+    translate: -15px;
 }
