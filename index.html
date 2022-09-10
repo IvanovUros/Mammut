@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <section class="main-menu" id="mainMenu"></section>
     <header class="main-header">
         <div class="overhead-bar"></div>
         <div class="menu-btn">
@@ -17,12 +18,18 @@
             <span class="btn-burger-btmr"></span>
         </div>
         <ul class="header-nav">
-            <li class="header-nav-item"><p class="nav-text">Clothing</p></li>
-            <li class="header-nav-item"><p class="nav-text">Footwear</p></li>
-            <li class="header-nav-item"><p class="nav-text">Equipment</p></li>
+            <li class="header-nav-item">
+                <p class="nav-text">Clothing</p>
+            </li>
+            <li class="header-nav-item">
+                <p class="nav-text">Footwear</p>
+            </li>
+            <li class="header-nav-item">
+                <p class="nav-text">Equipment</p>
+            </li>
         </ul>
         <div class="logo-wrapper"></div>
-        <ul class="header-icon-wrapper">
+        <ul class="header-icon-wrapper" id="headerIconNav">
             <li class="header-icon">
                 <div class="basket-icon">
                     <span class="basket-handle"></span>
@@ -114,8 +121,7 @@
     </div>
     <section class="card-container">
         <div class=" card cardl">
-            <div class="card-men">
-            </div>
+            <div class="card-men"></div>
         </div>
         <div class="card cardr">
             <div class="card-women"></div>
@@ -258,13 +264,37 @@
                         <p class="sub-nav-content">Linkedin</p>
                     </div>
                 </nav>
-                <nav class="footer-sub-nav"></nav>
+                <nav class="footer-sub-nav">
+                    <h1 class="footer-sub-nav-heading">Company</h1>
+                    <div class="footer-sub-nav-item">
+                        <div class="sub-nav-arrow-container">
+                            <span class="sub-nav-arrow-line"></span>
+                        </div>
+                        <p class="sub-nav-content">Responsibility</p>
+                    </div>
+                    <div class="footer-sub-nav-item">
+                        <div class="sub-nav-arrow-container">
+                            <span class="sub-nav-arrow-line"></span>
+                        </div>
+                        <p class="sub-nav-content">Newsroom</p>
+                    </div>
+                    <div class="footer-sub-nav-item">
+                        <div class="sub-nav-arrow-container">
+                            <span class="sub-nav-arrow-line"></span>
+                        </div>
+                        <p class="sub-nav-content">Careers</p>
+                    </div>
+                </nav>
             </section>
         </section>
-        <div class="footer-lower">
-            <div class="footer-switches"></div>
-            <nav class="footer-legal"></nav>
-        </div>
+        <section class="footer-lower">
+            <ul class="footer-legal">
+                <li class="footer-legal-item">Cookies</li>
+                <li class="footer-legal-item">Legal Notice</li>
+                <li class="footer-legal-item">Terms & Conditions</li>
+                <li class="footer-legal-item">Data Protection Policy</li>
+            </ul>
+        </section>
     </footer>
     <script src="script.js"></script>
 </body>
