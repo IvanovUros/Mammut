@@ -7,13 +7,16 @@ const extentionOne = document.getElementById('extentionOne');
 const extentionTwo = document.getElementById('extentionTwo');
 const menuClothing = document.getElementById('menuClothing');
 
+function extentionWidth () {
+  extentionOne.style.width = '0%'
+};
 
-let test = false;
+
 let menuOpen = false;
 menuBtn.addEventListener('click', () => {
   if(!menuOpen) {
     menuBtn.classList.add('open');
-    menu.classList.add("main-menu-open");
+    menu.style.width = 'calc(100%/3)';
     headerIcon.style.display = 'none';
     logo.style.display = 'none';
     navItem.style.display = 'none';
@@ -24,12 +27,12 @@ menuBtn.addEventListener('click', () => {
     logo.style.display = 'block';
     navItem.style.display = 'block';
     extentionOne.style.width = '0%';
-    test = true;
+    extentionWidth();
+    setTimeout( function menuOverflow() {
+      menu.style.overflow = 'hidden';
+      menu.style.width = '0%';
+    },250);
     menuOpen = false;
-    if (test) {
-      menu.classList.remove("main-menu-open");
-      test = false;
-    }
   }
 }); 
 
@@ -38,9 +41,9 @@ menuBtn.addEventListener('click', () => {
 
 
 menuClothing.addEventListener('mouseover', () => {
+  menu.style.overflow = 'initial';
   extentionOne.style.width = '100%';
 });
-
 
 
 

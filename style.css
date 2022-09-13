@@ -148,7 +148,6 @@ body {
 }
 .main-menu-open {
     width: calc(100% / 3);
-    overflow: initial;
 }
 .menu-main-nav {
     position: absolute;
@@ -300,7 +299,7 @@ body {
 
 .main-menu-extention-one {
    position: absolute;
-   width: 0%;
+   width: 0;
    height: 100%;
    background-image: url(/Mammut/menu-backgrounds/clothing.jpg);
    background-size: cover;
@@ -309,8 +308,8 @@ body {
    left: 100%;
 }
 
-  
-    
+
+
 
 
 /* LOGO */
