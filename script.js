@@ -3,13 +3,17 @@ const menu = document.getElementById('mainMenu');
 const headerIcon = document.getElementById('headerIconNav');
 const logo = document.querySelector('.logo-wrapper'); 
 const navItem = document.querySelector('.header-nav');
-const extentionOne = document.getElementById('extentionOne');
-const extentionTwo = document.getElementById('extentionTwo');
-const menuClothing = document.getElementById('menuClothing');
+const extentionClothingOne = document.getElementById('extentionClothingOne');
+const extentionClothingTwo = document.getElementById('extentionClothingTwo');
 
-function extentionWidth () {
-  extentionOne.style.width = '0%'
+
+
+function extentionWidth (x) {
+  x.style.width = '0%';
 };
+function genderDisplay () {
+  genderContainer.style.display = 'initial';
+}
 
 
 let menuOpen = false;
@@ -26,24 +30,44 @@ menuBtn.addEventListener('click', () => {
     headerIcon.style.display = 'block';
     logo.style.display = 'block';
     navItem.style.display = 'block';
-    extentionOne.style.width = '0%';
-    extentionWidth();
+    extentionWidth(extentionClothingTwo);
+    setTimeout(extentionWidth, 250, extentionClothingOne);
+    setTimeout(genderDisplay,250);
     setTimeout( function menuOverflow() {
       menu.style.overflow = 'hidden';
       menu.style.width = '0%';
-    },250);
+    },500);
     menuOpen = false;
   }
-}); 
+});
 
 
-
-
+const menuClothing = document.getElementById('menuClothing');
+const menuFootwear = document.getElementById('menuFootwear');
+const shopByActivityClothing = document.getElementById('shopByActivityClothing');
+const menClothing = document.getElementById('menClothing');
+const womenClothing = document.getElementById('womenClothing');
+const genderContainer = document.getElementById('genderContainerWrapper')
+const extentionTwoNavShopByActivity = document.getElementById('extentionTwoNavShopByActivity')
 
 menuClothing.addEventListener('mouseover', () => {
   menu.style.overflow = 'initial';
-  extentionOne.style.width = '100%';
+  extentionClothingOne.style.width = '100%';
 });
+shopByActivityClothing.addEventListener('mouseover', () => {
+  menu.style.overflow = 'initial';
+  extentionClothingTwo.style.width = '100%';
+  genderContainer.style.display = 'none';
+  extentionTwoNavShopByActivity.style.display = 'initial';
+});
+menClothing.addEventListener('mouseover', () => {
+  menu.style.overflow = 'initial';
+  extentionClothingTwo.style.width = '100%';
+  genderContainer.style.display = 'none';
+  extentionTwoNavShopByActivity.style.display = 'none';
+});
+
+
 
 
 

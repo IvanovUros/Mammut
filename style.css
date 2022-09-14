@@ -297,7 +297,7 @@ body {
     translate: 3.5rem;
 }
 
-.main-menu-extention-one {
+.main-menu-extention-clothing-one {
    position: absolute;
    width: 0;
    height: 100%;
@@ -307,6 +307,93 @@ body {
    transition: all .3s ease-in-out;
    left: 100%;
 }
+.clothing-nav {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 40%;
+    display: flex;
+    justify-content: center;
+}
+.clothing-nav-content-wrapper {
+    width: 85%;
+    height: 70%;
+    margin-top: 10%;
+}
+.clothing-nav-item {
+    display: inline-block;
+    border-bottom: 0.2rem solid #92999d;
+    width: 100%;
+    height: 10rem;
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.clothing-nav-item:hover .nav-content {
+    transform: translateX(4.5rem);
+}
+.clothing-nav-item:hover .arrow-line {
+    background-color: #dcdde0;
+}
+.clothing-nav-item:hover .arrow-line::after {
+    background-color: #dcdde0;
+}
+.clothing-nav-item:hover .arrow-line::before {
+    background-color: #dcdde0;
+}
+.clothing-nav-item:hover .arrow-container {
+    translate: -1.5rem;
+}
+.extention-text {
+    color: white;
+    font-size: 4rem; 
+    position: absolute;
+    transition: all .2s ease-in-out;
+}
+.clothing-nav-item:hover .extention-text {
+    translate: 3.5rem;
+}
+.main-menu-extention-clothing-two {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    left: 200%;
+    transition: all .3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.extention-two-nav-wrapper-shop-by-activity {
+    position: absolute;
+    width: 85%;
+    height: 50rem;
+    top: 16.2rem;
+    overflow: hidden;
+}
+.extention-two-nav-item {
+    display: inline-block;
+    width: 100%;
+    height: calc(100%/5);
+    border-bottom: 0.2rem black solid;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.extention-two-nav-item:hover .category-card-icon-wrapper-item-first {
+    translate: 0rem;
+}
+.extention-two-nav-item:hover .category-card-icon-wrapper-item-second {
+    translate: 0rem;
+}
+.extention-two-nav-item:hover .category-card-icon-wrapper-item-third {
+    translate: 0rem;
+}
+
+
+
+
 
 
 
@@ -558,7 +645,6 @@ body {
     margin: 2.56rem 0 2.56rem 0;
     color: white;
 }
-
 .gender-link-container {
     width: 10rem;
     height: 3rem;
