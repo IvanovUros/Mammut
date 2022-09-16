@@ -306,6 +306,7 @@ body {
    background-position: center;   
    transition: all .3s ease-in-out;
    left: 100%;
+   overflow: hidden;
 }
 .clothing-nav {
     width: 100%;
@@ -330,6 +331,21 @@ body {
     align-items: center;
     cursor: pointer;
 }
+.equipment-nav-item {
+    display: inline-block;
+    border-bottom: 0.2rem solid #92999d;
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.equipment-nav-content-wrapper {
+    width: 85%;
+    height: 70%;
+    margin-top: 10%;
+    padding-top: 10rem;
+}
 .clothing-nav-item:hover .nav-content {
     transform: translateX(4.5rem);
 }
@@ -345,11 +361,31 @@ body {
 .clothing-nav-item:hover .arrow-container {
     translate: -1.5rem;
 }
+.equipment-nav-item:hover .nav-content {
+    transform: translateX(4.5rem);
+}
+.equipment-nav-item:hover .arrow-line {
+    background-color: #dcdde0;
+}
+.equipment-nav-item:hover .arrow-line::after {
+    background-color: #dcdde0;
+}
+.equipment-nav-item:hover .arrow-line::before {
+    background-color: #dcdde0;
+}
+.equipment-nav-item:hover .arrow-container {
+    translate: -1.5rem;
+}
+.equipment-nav-item:hover .extention-text {
+    translate: 3.5rem;
+}
 .extention-text {
     color: white;
+    opacity: initial;
     font-size: 4rem; 
     position: absolute;
     transition: all .2s ease-in-out;
+    white-space: nowrap;
 }
 .clothing-nav-item:hover .extention-text {
     translate: 3.5rem;
@@ -397,6 +433,28 @@ body {
     margin-left: 0.2rem;
     white-space: nowrap;
 }
+.main-menu-extention-footwear-one {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-image: url(/Mammut/menu-backgrounds/footwear.jpg);
+    background-size: cover;
+    background-position: center;   
+    transition: all .3s ease-in-out;
+    left: 100%;
+    overflow: hidden;
+ }
+ .main-menu-extention-equipment-one {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-image: url(/Mammut/menu-backgrounds/equipment.jpg);
+    background-size: cover;
+    background-position: center;   
+    transition: all .3s ease-in-out;
+    left: 100%;
+    overflow: hidden;
+ }
 
 
 
