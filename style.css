@@ -365,17 +365,18 @@ body {
     justify-content: center;
     overflow: hidden;
 }
-.extention-two-nav-wrapper-shop-by-activity {
+.extention-two-nav-wrapper-clothing {
     position: absolute;
     width: 85%;
-    height: 50rem;
-    top: 16.2rem;
+    height: 70rem;
+    top: 10rem;
     overflow: hidden;
+    display: none;
 }
 .extention-two-nav-item {
     display: inline-block;
     width: 100%;
-    height: calc(100%/5);
+    height: 10rem;
     border-bottom: 0.2rem black solid;
     display: flex;
     align-items: center;
@@ -390,6 +391,14 @@ body {
 .extention-two-nav-item:hover .category-card-icon-wrapper-item-third {
     translate: 0rem;
 }
+.extention-two-nav-item-text {
+    font-size: 1.8rem;
+    color: black;
+    margin-left: 0.2rem;
+    white-space: nowrap;
+}
+
+
 
 
 
