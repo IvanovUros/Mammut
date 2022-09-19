@@ -390,7 +390,7 @@ body {
 .clothing-nav-item:hover .extention-text {
     translate: 3.5rem;
 }
-.main-menu-extention-clothing-two {
+.main-menu-extention-two {
     position: absolute;
     width: 0%;
     height: 100%;
@@ -401,7 +401,7 @@ body {
     justify-content: center;
     overflow: hidden;
 }
-.extention-two-nav-wrapper-clothing {
+.extention-two-nav-wrapper {
     position: absolute;
     width: 85%;
     height: 70rem;

@@ -14,6 +14,12 @@ function extentionWidthPos (x) {
 function genderDisplay () {
   genderContainer.style.display = 'initial';
 }
+function displayNone (x) {
+  x.style.display = 'none';
+}
+function displayBlock (x) {
+  x.style.display = 'block';
+}
 
 
 let menuOpen = false;
@@ -21,16 +27,16 @@ menuBtn.addEventListener('click', () => {
   if(!menuOpen) {
     menuBtn.classList.add('open');
     menu.style.width = 'calc(100%/3)';
-    headerIcon.style.display = 'none';
-    logo.style.display = 'none';
-    navItem.style.display = 'none';
+    displayNone(headerIcon);
+    displayNone(logo);
+    displayNone(navItem);
     menuOpen = true;
   } else {
     menuBtn.classList.remove('open');
-    headerIcon.style.display = 'block';
-    logo.style.display = 'block';
-    navItem.style.display = 'block';
-    extentionWidth(extentionClothingTwo);
+    displayBlock(headerIcon);
+    displayBlock(logo);
+    displayBlock(navItem);
+    extentionWidth(extentionMenuTwo);
     setTimeout(extentionWidth, 250, extentionClothingOne);
     setTimeout(extentionWidth, 250, extentionFootwearOne);
     setTimeout(genderDisplay,250);
@@ -50,15 +56,22 @@ const shopByActivityClothing = document.getElementById('shopByActivityClothing')
 const menClothing = document.getElementById('menClothing');
 const womenClothing = document.getElementById('womenClothing');
 const genderContainer = document.getElementById('genderContainerWrapper');
-const extentionTwoNavShopByActivity = document.getElementById('extentionTwoNavShopByActivity');
+const extentionClothingShopByActivity = document.getElementById('extentionClothingShopByActivity');
+const extentionFootwearShopByActivity = document.getElementById('extentionFootwearShopByActivity');
+const extentionFootwearMen = document.getElementById('extentionFootwearMen');
+const extentionFootwearWomen = document.getElementById('extentionFootwearWomen');
 const extentionClothingMen = document.getElementById('extentionClothingMen');
 const extentionClothingWomen = document.getElementById('extentionClothingWomen');
 const extentionClothingOne = document.getElementById('extentionClothingOne');
-const extentionClothingTwo = document.getElementById('extentionClothingTwo');
+const extentionMenuTwo = document.getElementById('extentionMenuTwo');
 const extentionFootwearOne = document.getElementById('extentionFootwearOne');
 const extentionEquipmentOne = document.getElementById('extentionEquipmentOne');
 const shopByActivityEquipment = document.getElementById('shopByActivityEquipment');
-const extemtionTwoNavEquipment =document.getElementById('extentionTwoNavEquipment');
+const extentionTwoNavEquipment = document.getElementById('extentionTwoNavEquipment');
+const shopByActivityFootwear = document.getElementById('shopByActivityFootwear');
+const menFootwear = document.getElementById('menFootwear');
+const womenFootwear = document.getElementById('womenFootwear');
+
 
 
 
@@ -68,60 +81,99 @@ menuClothing.addEventListener('mouseover', () => {
   extentionWidthPos(extentionClothingOne);
   extentionWidth(extentionFootwearOne);
   extentionWidth(extentionEquipmentOne);
-  extentionWidth(extentionEquipmentTwo);
-
+  extentionWidth(extentionMenuTwo);
+  displayNone(extentionFootwearShopByActivity);
+  displayNone(extentionFootwearMen);
+  displayNone(extentionFootwearWomen);
 });
 menuFootwear.addEventListener('mouseover', () => {
   menu.style.overflow = 'initial';
-  extentionWidth(extentionClothingTwo);
+  extentionWidth(extentionMenuTwo);
   extentionWidth(extentionClothingOne);
   extentionWidth(extentionEquipmentOne);
   extentionWidthPos(extentionFootwearOne);
 });
 menuEquipment.addEventListener('mouseover', () => {
   menu.style.overflow = 'initial';
-  extentionWidth(extentionClothingTwo);
+  extentionWidth(extentionMenuTwo);
   extentionWidth(extentionClothingOne);
   extentionWidth(extentionFootwearOne);
   extentionWidthPos(extentionEquipmentOne);
+  displayNone(extentionFootwearShopByActivity);
+  displayNone(extentionFootwearMen);
+  displayNone(extentionFootwearWomen);
 });
 shopByActivityClothing.addEventListener('mouseover', () => {
   menu.style.overflow = 'initial';
-  extentionWidthPos(extentionClothingTwo);
-  genderContainer.style.display = 'none';
-  extentionTwoNavShopByActivity.style.display = 'initial';
-  extentionClothingMen.style.display = 'none';
-  extentionClothingWomen.style.display = 'none';
-  extemtionTwoNavEquipment.style.display = 'none';
-
+  extentionWidthPos(extentionMenuTwo);
+  displayNone(genderContainer);
+  displayBlock(extentionClothingShopByActivity);
+  displayNone(extentionClothingMen);
+  displayNone(extentionClothingWomen);
+  displayNone(extentionTwoNavEquipment);
 });
 menClothing.addEventListener('mouseover', () => {
   menu.style.overflow = 'initial';
-  extentionWidthPos(extentionClothingTwo);
-  genderContainer.style.display = 'none';
-  extentionTwoNavShopByActivity.style.display = 'none';
-  extentionClothingMen.style.display = 'block';
-  extentionClothingWomen.style.display = 'none';
-  extemtionTwoNavEquipment.style.display = 'none';
-
+  extentionWidthPos(extentionMenuTwo);
+  displayNone(genderContainer);
+  displayNone(extentionClothingShopByActivity);
+  displayBlock(extentionClothingMen);
+  displayNone(extentionClothingWomen);
+  displayNone(extentionTwoNavEquipment);
 });
 womenClothing.addEventListener('mouseover', () => {
   menu.style.overflow = 'initial';
-  extentionWidthPos(extentionClothingTwo);
-  genderContainer.style.display = 'none';
-  extentionClothingWomen.style.display = 'block';
-  extentionClothingMen.style.display = 'none';
-  extentionTwoNavShopByActivity.style.display = 'none';
-  extemtionTwoNavEquipment.style.display = 'none';
+  extentionWidthPos(extentionMenuTwo);
+  displayNone(genderContainer);
+  displayBlock(extentionClothingWomen);
+  displayNone(extentionClothingMen);
+  displayNone(extentionClothingShopByActivity);
+  displayNone(extentionTwoNavEquipment);
 });
 shopByActivityEquipment.addEventListener('mouseover', () => {
   menu.style.overflow = 'initial';
-  extentionWidthPos(extentionClothingTwo);
-  genderContainer.style.display = 'none';
-  extemtionTwoNavEquipment.style.display = 'block';
-  extentionClothingWomen.style.display = 'none';
-  extentionClothingMen.style.display = 'none';
-  extentionTwoNavShopByActivity.style.display = 'none';
+  extentionWidthPos(extentionMenuTwo);
+  displayNone(genderContainer);
+  displayBlock(extentionTwoNavEquipment);
+  displayNone(extentionClothingWomen);
+  displayNone(extentionClothingMen);
+  displayNone(extentionClothingShopByActivity);
+});
+shopByActivityFootwear.addEventListener('mouseover', () => {
+  menu.style.overflow = 'initial';
+  extentionWidthPos(extentionMenuTwo);
+  displayNone(genderContainer);
+  displayBlock(extentionFootwearShopByActivity);
+  displayNone(extentionFootwearMen);
+  displayNone(extentionFootwearWomen);
+  displayNone(extentionTwoNavEquipment);
+  displayNone(extentionClothingShopByActivity);
+  displayNone(extentionClothingMen);
+  displayNone(extentionClothingWomen);
+});
+menFootwear.addEventListener('mouseover', () => {
+  menu.style.overflow = 'initial';
+  extentionWidthPos(extentionMenuTwo);
+  displayNone(genderContainer);
+  displayNone(extentionFootwearShopByActivity);
+  displayBlock(extentionFootwearMen);
+  displayNone(extentionFootwearWomen);
+  displayNone(extentionTwoNavEquipment);
+  displayNone(extentionClothingShopByActivity);
+  displayNone(extentionClothingMen);
+  displayNone(extentionClothingWomen);
+});
+womenFootwear.addEventListener('mouseover', () => {
+  menu.style.overflow = 'initial';
+  extentionWidthPos(extentionMenuTwo);
+  displayNone(genderContainer);
+  displayNone(extentionFootwearShopByActivity);
+  displayNone(extentionFootwearMen);
+  displayBlock(extentionFootwearWomen);
+  displayNone(extentionTwoNavEquipment);
+  displayNone(extentionClothingShopByActivity);
+  displayNone(extentionClothingMen);
+  displayNone(extentionClothingWomen);
 });
 
 
