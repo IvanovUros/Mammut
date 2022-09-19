@@ -21,7 +21,7 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    
+    z-index: 5;
 }
 .overhead-bar {
     width: 95%;
@@ -69,13 +69,21 @@ body {
 .header-nav-item {
     height: 100%;
     margin-right: 1.6rem;
-    
-    
+}
+.menu-open-page-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background-color: black;
+    opacity: 50%;
+    display: none;
 }
 .menu-btn{
     width: 2.4rem;
     height: 2.4rem;
     position: absolute;
+    z-index: 4;
     left: 2.5%;
     display: flex;
     cursor: pointer;
@@ -145,6 +153,7 @@ body {
     position: absolute;
     transition: all .5s ease-in-out;
     overflow: hidden;
+    z-index: 3;
 }
 .main-menu-open {
     width: calc(100% / 3);
@@ -644,6 +653,7 @@ body {
 
 /* HERO SECTIONS */
 .hero {
+    position: relative;
     width: 100%;
     height: 93rem;
     display: flex;
@@ -1001,43 +1011,128 @@ body {
     left: 9%;
     top: 10%;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .cardr {
     right: 9%;
     top: 15%;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.card-men {
+.card-men-background {
     width: 100%;
     height: 100%;
-    background-color: black;
     background-image: url(/Mammut/slike-mammut/Men.jpg);
     background-position: center;
     background-size: cover;
     transition: all .5s ease-in-out;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: all .5s ease;
+    position: absolute;
+    z-index: 0;
 }
-.card:hover .card-men,
-.card:focus .card-men {
-  transform: scale(1.05);
-}
-.card-women {
+.card-women-background {
     width: 100%;
     height: 100%;
-    background-color: black;
     background-image: url(/Mammut/slike-mammut/Women.jpg);
     background-position: center;
     background-size: cover;
     transition: all .5s ease-in-out;
-    cursor: pointer;
+    position: absolute;
+    z-index: 0;
 }
-.card:hover .card-women,
-.card:focus .card-women {
+.card-content-wrapper {
+    width: 80%;
+    height: 80%;
+    position: inherit;
+    position: relative;
+    z-index: 1;
+}
+.card-heading {
+    position: absolute;
+    color: white;
+    font-size: 6rem;
+    white-space: nowrap;
+}
+.card-text-wrapper {
+    position: relative;
+    position: absolute;
+    width: 50rem;
+    height: 2rem;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+.card-text {
+    font-size: 2.2rem;
+    color: white;
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all .5s ease-in-out;
+}
+.card:hover .card-men-background {
+    transform: scale(1.05);
+}
+.card:hover .card-women-background {
   transform: scale(1.05);
+}
+.card-arrow-container {
+    height: 100%;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 0.2rem;
+    transition: all .4s ease-in-out;
+    translate: -3rem;
+}
+.card-arrow-line {
+    width: 1.5rem;
+    height: 0.3rem;
+    background-color: transparent;
+    transition: all .4s ease-in-out;
+    position: absolite;
+}
+.card-arrow-line::after,
+.card-arrow-line::before {
+    border-radius: 0.2rem;
+    content: '';
+    width: 0.7rem;
+    height: 0.3rem;
+    background-color: transparent;
+    position: absolute;
+    transition: all .4s ease-in-out;
+}
+.card-arrow-line::after {
+    transform: rotate(45deg);
+    translate: 1rem -0.2rem;
+    transition: all .4s ease-in-out;
+}
+.card-arrow-line::before {
+    transform: rotate(-45deg);
+    translate: 1rem 0.2rem;
+    transition: all .4s ease-in-out;
+}
+.card:hover .card-arrow-container {
+    translate: 0rem;
+}
+.card:hover .card-arrow-line {
+    background-color: white;
+}
+.card:hover .card-arrow-line::before {
+    background-color: white;
+}
+.card:hover .card-arrow-line::after {
+    background-color: white;
+}
+.card:hover .card-text {
+    translate: 3rem;
 }
 
 

@@ -3,6 +3,7 @@ const menu = document.getElementById('mainMenu');
 const headerIcon = document.getElementById('headerIconNav');
 const logo = document.querySelector('.logo-wrapper'); 
 const navItem = document.querySelector('.header-nav');
+const menuBackgroundCover = document.getElementById('mainMenuBackgroundCover');
 
 
 function extentionWidth (x) {
@@ -30,6 +31,7 @@ menuBtn.addEventListener('click', () => {
     displayNone(headerIcon);
     displayNone(logo);
     displayNone(navItem);
+    displayBlock(menuBackgroundCover);
     menuOpen = true;
   } else {
     menuBtn.classList.remove('open');
@@ -44,6 +46,7 @@ menuBtn.addEventListener('click', () => {
       menu.style.overflow = 'hidden';
       menu.style.width = '0%';
     },500);
+    setTimeout(displayNone, 500, menuBackgroundCover);
     menuOpen = false;
   }
 });
