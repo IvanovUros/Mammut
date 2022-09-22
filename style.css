@@ -147,32 +147,37 @@ body {
 }
 /* MAIN MENU */
 .main-menu {
-    height: 100%;
+    height: 100vh;
     width: 0%;
     background-color: white;
     position: absolute;
     transition: all .5s ease-in-out;
-    overflow: hidden;
     z-index: 3;
+    overflow: hidden;
 }
 .main-menu-open {
     width: calc(100% / 3);
 }
 .menu-main-nav {
     position: absolute;
-    width: 80%;
+    width: 100%;
     height: 30%;
     top: 15rem;
     left: 5rem;
 }
 .menu-main-nav-item {
     display: inline-block;
-    border-bottom: 0.2rem #cdcdcd solid;
     width: 100%;
     height: calc(100%/3);
     display: flex;
     align-items: center;
     cursor: pointer;
+}
+.menu-main-nav-border-line {
+    display: inline-block;
+    width: 80%;
+    height: 0.2rem;
+    background-color: #cdcdcd;
 }
 .menu-main-nav-arrow-container {
     height: 100%;
@@ -236,7 +241,7 @@ body {
     width: 30%;
     height: 20rem;
     left: 5rem;
-    bottom: 25rem;
+    bottom: 20rem;
 }
 .menu-sub-nav-item {
     display: inline-block;
@@ -305,165 +310,268 @@ body {
 .menu-sub-nav-item:hover .menu-sub-nav-text {
     translate: 3.5rem;
 }
-
-.main-menu-extention-clothing-one {
-   position: absolute;
-   width: 0;
-   height: 100%;
-   background-image: url(/Mammut/menu-backgrounds/clothing.jpg);
-   background-size: cover;
-   background-position: center;   
-   transition: all .3s ease-in-out;
-   left: 100%;
-   overflow: hidden;
-}
-.clothing-nav {
+ .main-menu-sub-extention-clothing {
+    position: absolute;
+    width: 0%;
+    height: 100vh;
+    background-image: url(/Mammut/menu-backgrounds/clothing.jpg);
+    background-size: cover;
+    background-position: center;
+    left: 58.2rem;
+    transition: all .2s ease-in-out;
+    top: -15rem;
+    overflow: hidden;
+ }
+ .main-menu-sub-extention-footwear {
+    position: absolute;
+    width: 0%;
+    height: 100vh;
+    background-image: url(/Mammut/menu-backgrounds/footwear.jpg);
+    background-size: cover;
+    background-position: center;
+    left: 58.2rem;
+    transition: all .2s ease-in-out;
+    top: -15rem;
+    overflow: hidden;
+ }
+ .main-menu-sub-extention-equipment {
+    position: absolute;
+    width: 0%;
+    height: 100vh;
+    background-image: url(/Mammut/menu-backgrounds/equipment.jpg);
+    background-size: cover;
+    background-position: center;
+    left: 58.2rem;
+    transition: all .2s ease-in-out;
+    top: -15rem;
+    overflow: hidden;
+ }
+ .extention-background {
+    background-color: black;
+    opacity: 50%;
     width: 100%;
     height: 100%;
-    background-color: black;
-    opacity: 40%;
-    display: flex;
-    justify-content: center;
-}
-.clothing-nav-content-wrapper {
-    width: 85%;
-    height: 70%;
-    margin-top: 10%;
-}
-.clothing-nav-item {
-    display: inline-block;
-    border-bottom: 0.2rem solid #92999d;
-    width: 100%;
-    height: 10rem;
-    margin-top: 10rem;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-.equipment-nav-item {
-    display: inline-block;
-    border-bottom: 0.2rem solid #92999d;
-    width: 100%;
-    height: 10rem;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-.equipment-nav-content-wrapper {
-    width: 85%;
-    height: 70%;
-    margin-top: 10%;
-    padding-top: 10rem;
-}
-.clothing-nav-item:hover .nav-content {
-    transform: translateX(4.5rem);
-}
-.clothing-nav-item:hover .arrow-line {
-    background-color: #dcdde0;
-}
-.clothing-nav-item:hover .arrow-line::after {
-    background-color: #dcdde0;
-}
-.clothing-nav-item:hover .arrow-line::before {
-    background-color: #dcdde0;
-}
-.clothing-nav-item:hover .arrow-container {
-    translate: -1.5rem;
-}
-.equipment-nav-item:hover .nav-content {
-    transform: translateX(4.5rem);
-}
-.equipment-nav-item:hover .arrow-line {
-    background-color: #dcdde0;
-}
-.equipment-nav-item:hover .arrow-line::after {
-    background-color: #dcdde0;
-}
-.equipment-nav-item:hover .arrow-line::before {
-    background-color: #dcdde0;
-}
-.equipment-nav-item:hover .arrow-container {
-    translate: -1.5rem;
-}
-.equipment-nav-item:hover .extention-text {
-    translate: 3.5rem;
-}
-.extention-text {
-    color: white;
-    opacity: initial;
-    font-size: 4rem; 
     position: absolute;
+    z-index: 5;
+ }
+ .menu-sub-extention-nav {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 6;
+    
+    padding-top: 1rem;
+ }
+ .menu-sub-extention-equipment-nav {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 6;
+    margin-top: 11.5rem;
+ }
+ .sub-extention-nav-item {
+    width: 90%;
+    height: 23rem;
+    position: relative;
+    display: inline-block;
+    margin-left: 10%;
+ }
+ .sub-extention-nav-border-line {
+    width: 80%;
+    height: .2rem;
+    background-color: #91999d;
+    position: absolute;
+    left: 10%;
+ }
+ .sub-extention-equipment-nav-item {
+    width: 90%;
+    height: 10rem;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    position: relative;
+ }
+ .sub-extention-equipment-nav-item:hover .sub-extention-arrow-container {
+    translate: 0rem;
+}
+.sub-extention-equipment-nav-item:hover .sub-extention-arrow-line {
+    background-color: white;
+}
+.sub-extention-equipment-nav-item:hover .sub-extention-arrow-line::before {
+    background-color: white;
+}
+.sub-extention-equipment-nav-item:hover .sub-extention-arrow-line::after {
+    background-color: white;
+}
+.sub-extention-equipment-nav-item:hover .sub-extention-text {
+    translate: 5rem;
+}
+ .sub-extention-text {
+    font-size: 3rem;
+    color: white;
+    position: absolute;
+    bottom: 3rem;
     transition: all .2s ease-in-out;
     white-space: nowrap;
-}
-.clothing-nav-item:hover .extention-text {
-    translate: 3.5rem;
-}
-.main-menu-extention-two {
+ }
+ .sub-extention-arrow-container {
+    height: 10rem;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 0.2rem;
+    translate: -6rem;
+    transition: all .3s ease-in-out;
     position: absolute;
+    bottom: 0;
+}
+.sub-extention-arrow-line {
+    width: 2.5rem;
+    height: 0.3rem;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+}
+.sub-extention-arrow-line::after,
+.sub-extention-arrow-line::before {
+    border-radius: 0.2rem;
+    content: '';
+    width: 1.5rem;
+    height: 0.3rem;
+    background-color: transparent;
+    position: absolute;
+    transition: all .2s ease-in-out;
+}
+.sub-extention-arrow-line::after {
+    transform: rotate(45deg);
+    translate: 1.5rem -0.5rem;
+    transition: all .3s ease-in-out;
+}
+.sub-extention-arrow-line::before {
+    transform: rotate(-45deg);
+    translate: 1.5rem 0.5rem;
+    transition: all .3s ease-in-out;
+}
+.sub-extention-nav-item:hover .sub-extention-arrow-container {
+    translate: 0rem;
+}
+.sub-extention-nav-item:hover .sub-extention-arrow-line {
+    background-color: white;
+}
+.sub-extention-nav-item:hover .sub-extention-arrow-line::before {
+    background-color: white;
+}
+.sub-extention-nav-item:hover .sub-extention-arrow-line::after {
+    background-color: white;
+}
+.sub-extention-nav-item:hover .sub-extention-text {
+    translate: 5rem;
+}
+.menu-sub-sub-extention {
     width: 0%;
     height: 100%;
     background-color: white;
-    left: 200%;
-    transition: all .3s ease-in-out;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-}
-.extention-two-nav-wrapper {
     position: absolute;
-    width: 85%;
-    height: 70rem;
-    top: 10rem;
-    overflow: hidden;
+    left: 100%;
+    transition: all .2s ease-in-out;
+}
+.sub-sub-extention-nav-shop-by-activity {
+    width: calc(100vw/3);
+    height: 100vh;
+    position: absolute;
+    z-index: 15;
+    left: 100%;
+    top: -1rem;
+    padding: 14rem 0 0 5%;
     display: none;
 }
-.extention-two-nav-item {
-    display: inline-block;
-    width: 100%;
+.sub-sub-extention-nav-men {
+    width: calc(100vw/3);
+    height: 100vh;
+    position: absolute;
+    z-index: 15;
+    left: 100%;
+    top: -24rem;
+    padding: 14rem 0 0 5%;
+    display: none;
+}
+.sub-sub-extention-nav-women {
+    width: calc(100vw/3);
+    height: 100vh;
+    position: absolute;
+    z-index: 15;
+    left: 100%;
+    top: -47rem;
+    padding: 14rem 0 0 5%;
+    display: none;
+}
+.sub-sub-extention-nav-equipment-shop-by-activity {
+    width: calc(100vw/3);
+    height: 100vh;
+    position: absolute;
+    z-index: 15;
+    left: 100%;
+    top: -11.5rem;
+    padding: 11.7rem 0 0 5%;
+    display: none;
+}
+.sub-sub-extention-nav-item {
+    width: 90%;
     height: 10rem;
-    border-bottom: 0.2rem black solid;
+    border-bottom: 0.2rem solid black;
+    display: inline-block;
     display: flex;
     align-items: center;
-    cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
-.extention-two-nav-item:hover .category-card-icon-wrapper-item-first {
-    translate: 0rem;
-}
-.extention-two-nav-item:hover .category-card-icon-wrapper-item-second {
-    translate: 0rem;
-}
-.extention-two-nav-item:hover .category-card-icon-wrapper-item-third {
-    translate: 0rem;
-}
-.extention-two-nav-item-text {
+.sub-sub-extention-text {
     font-size: 1.8rem;
     color: black;
-    margin-left: 0.2rem;
-    white-space: nowrap;
 }
-.main-menu-extention-footwear-one {
+.sub-sub-extention-icon-wrapper {
     position: absolute;
-    width: 0%;
-    height: 100%;
-    background-image: url(/Mammut/menu-backgrounds/footwear.jpg);
-    background-size: cover;
-    background-position: center;   
+    right: 0;
+    width: 25rem;
+    height: 7rem;
+}
+.sub-sub-extention-icon {
+    float: right;
+    width: 7rem;
+    height: 7rem;
+    
+    margin: 0 .5rem;
+}
+.sub-sub-extention-icon-third {
+    translate: 25rem;
+    transition: all .5s ease-in-out;
+}
+.sub-sub-extention-icon-second {
+    translate: 20rem;
+    transition: all .4s ease-in-out;
+}
+.sub-sub-extention-icon-first {
+    translate: 15rem;
     transition: all .3s ease-in-out;
-    left: 100%;
-    overflow: hidden;
- }
- .main-menu-extention-equipment-one {
-    position: absolute;
-    width: 0%;
+}
+.sub-sub-extention-nav-item:hover .sub-sub-extention-icon-third {
+    translate: 0;
+}
+.sub-sub-extention-nav-item:hover .sub-sub-extention-icon-second {
+    translate: 0;
+}
+.sub-sub-extention-nav-item:hover .sub-sub-extention-icon-first {
+    translate: 0;
+}
+.sub-sub-extention-img {
+    width: 100%;
     height: 100%;
-    background-image: url(/Mammut/menu-backgrounds/equipment.jpg);
-    background-size: cover;
-    background-position: center;   
-    transition: all .3s ease-in-out;
-    left: 100%;
-    overflow: hidden;
- }
+}
+
+
+
+
 
 
 
