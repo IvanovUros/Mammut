@@ -59,6 +59,7 @@ menuBtn.addEventListener('click', () => {
     setTimeout(extentionWidth, 300, menuSubExtentionClothing);
     setTimeout(extentionWidth, 300, menuSubExtentionFootwear);
     setTimeout(extentionWidth, 300, menuSubExtentionEquipment);
+    setTimeout(overflowHidden, 300, menuSubExtentionEquipment);
     zIndexInitial(menuSubExtentionClothing);
     zIndexInitial(menuSubExtentionFootwear);
     zIndexInitial(menuSubExtentionEquipment);
