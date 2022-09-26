@@ -621,7 +621,6 @@ body {
     float: right;
     width: 7rem;
     height: 7rem;
-    
     margin: 0 .5rem;
 }
 
@@ -638,6 +637,10 @@ body {
 .sub-sub-extention-icon-left {
     translate: 15rem;
     transition: all .3s ease-in-out;
+}
+
+.sub-sub-extention-icon-winter {
+    margin: 0 1.5rem;
 }
 
 .sub-sub-extention-nav-item:hover .sub-sub-extention-icon-right {
@@ -1138,7 +1141,7 @@ body {
 @keyframes blink {
     0%, 100% { opacity: 0; }
     50% { opacity: 1; }
-  }
+}
   
   .dot {
     animation: blink 2s infinite;
@@ -1149,7 +1152,7 @@ body {
     position: absolute;
     left: 40%;
     top: 33%;
-  }
+}
   
 .categories-item {
     width: 20%;
@@ -1159,25 +1162,25 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
- }
+}
 
  .clothing {
     background-image: url(/Mammut/slike-mammut/clothing.jpg);
     background-size: cover;
     background-position: center;
- }
+}
 
  .footwear {
     background-image: url(/Mammut/slike-mammut/footwear.jpg);
     background-size: cover;
     background-position: center;
- }
+}
 
  .equipment {
     background-image: url(/Mammut/slike-mammut/equipment.jpg);
     background-size: cover;
     background-position: center;
- }
+}
 
  .categories-item-text-wrapper {
     width: 10rem;
@@ -1580,7 +1583,6 @@ body {
     height: 30rem;
     left: 2.5%;
     top: 5%;
-    
 }
 
 .communications-container {
@@ -1674,7 +1676,6 @@ body {
     color: #dcdde0;
     position: absolute;
     transition: all .2s ease-in-out;
-
 }
 
 .footer-nav-item:hover .nav-content {
