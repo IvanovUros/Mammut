@@ -222,27 +222,3 @@ equipmentShopByActivity.addEventListener('mouseover', () => {
   overflowInitial(equipmentShopByActivity);
   setTimeout(displayBlock, 200, equipmentShopByActivityNav);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
